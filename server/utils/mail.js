@@ -23,7 +23,7 @@ const sendMail = async (message) => {
 
   let mailDetails = {
     from: process.env.email,
-    to: "olaifatimothy@gmail.com",
+    to: message.receiver,
     subject: message.subject,
     html: `<div>
     <h1>Welcome to AgriEdge</h1>
