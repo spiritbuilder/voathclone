@@ -4,6 +4,7 @@ const user = require("../models/users");
 let router = express.Router();
 let bcrypt = require("bcrypt");
 let jwt = require("jsonwebtoken");
+const sendMail = require("../utils/mail");
 
 router.get("/", (req, res) => {
   user
@@ -25,26 +26,39 @@ router.post("/signup", async (req, res) => {
     password: hashedpassword,
   };
 
-  user
-    .create(userparams)
-    .then((user) =>
-      res.status(200).json({
-        message: "user created sucessfully",
-        userToken: jwt.sign(
-          { ...user, password: undefined, _id: undefined },
-          process.env.jwt,
-          { expiresIn: "24h" }
-        ),
-        fullname: `${user.firstname} ${user.lastname}`,
+  let users = await user.findOne({ email: req.body.email });
+  if (!users) {
+    user
+      .create(userparams)
+      .then((user) => {
+        res.status(200).json({
+          message: "user created sucessfully",
+          userToken: jwt.sign(
+            { ...user, password: undefined, _id: undefined },
+            process.env.jwt,
+            { expiresIn: "24h" }
+          ),
+          fullname: `${user.firstname} ${user.lastname}`,
+        });
+
+        sendMail({
+          receiver: user.email,
+          subject: `Agriedge Welcomes you `,
+          fullname: user.firstname + " " + user.lastname,
+        });
       })
-    )
-    .catch((e) => {
-      console.log(JSON.stringify(e));
-      if (e.code === 11000) {
-       return res.status(400).json({ message: "email has already been used" });
-      }
-     return res.status(500).json({ message: "server error" });
-    });
+      .catch((e) => {
+        console.log(JSON.stringify(e));
+        if (e.code === 11000) {
+          return res
+            .status(400)
+            .json({ message: "email has already been used" });
+        }
+        return res.status(500).json({ message: e });
+      });
+  } else {
+    res.status(400).json({ message: "Email already used by a user" });
+  }
 });
 
 router.post("/signin", async (req, res) => {

@@ -6,7 +6,10 @@ let schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  lastname:String,
+  lastname: {
+    type: String,
+    required: true,
+  },
   email: {
     type: String,
     unique: true,
@@ -16,6 +19,12 @@ let schema = new mongoose.Schema({
   password: {
     type: String,
     min: 8,
+    required: true,
+  },
+  phone: {
+    type: String,
+    required: true,
+    validate: [validator.isMobilePhone, "Please input a valid phone Number"],
   },
   createdAt: {
     type: Date,
