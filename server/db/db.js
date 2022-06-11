@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 
 class Database {
   _connect() {
-    let url = process.env.DB_URL || "mongodb://127.0.0.1:27017/kwaba";
+    let url = process.env.DB_URL || "mongodb://127.0.0.1:27017/voath";
     console.log(url);
     mongoose
       .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
