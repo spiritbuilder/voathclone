@@ -1,0 +1,81 @@
+
+.innercard {
+    width: 25%;
+    margin: auto;
+    margin-top: 20px;
+    height: fit-content;
+    padding: 30px;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+
+header {
+    position:static !important;
+}
+.dummy {
+    display: none;
+}
+.card {
+    background-image: url('../images/login-ground.jpg');
+    background-size: cover;
+    height: 700px;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+}
+.reg-form {
+    height: fit-content;
+    flex-basis: 30%;
+    position: relative;
+    left: -320px;
+    top: 50px;
+}
+
+.login-form {
+    display: none;
+    flex-basis: 30%;
+    position: relative;
+    top: 50px;
+}
+.innercard label {
+    display: block;
+    margin: 12px;
+    color: #fff;
+}
+#register, #login{
+    color: #fff;
+}
+.innercard input {
+    display: block;
+    width: 80%;
+    margin-top: 5px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid green;
+}
+button {
+   width: 70%;
+   background-color: green;
+   border: none;
+   color: #fff;
+   height: 25px;
+   border-radius: 5px;
+   margin-left: 13px;
+   cursor: pointer;
+   margin-top: 5px;
+}
+.forget-password {
+    display: block;
+}
+.bottom {
+    float: right;
+    margin-top: 20px;
+}
+.top {
+    margin-left: 40%;
+    margin-top: 20px;
+    display: inline-flex;
+}
+.top a{
+    margin-right: 20px;
+}
+

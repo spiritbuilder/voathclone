@@ -1,0 +1,254 @@
+* , *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    color: green;
+    background-color: #fff;
+    display: flex;
+    padding: 30px;
+    border-bottom: 2px inset;
+    position: fixed;
+  top: 0%;
+  transition: top 0.3s; 
+}
+.dummy {
+    width: 100%;
+    height: 20vh;
+}
+
+header .logo {
+    flex-basis: 60%;
+    position: relative;
+    top: -25px;
+}
+.header .nav {
+    float: right;
+}
+.nav button {
+  position: relative;
+  left: 240px;
+  top: -30px;
+  width: 70px;
+  height: 30px;
+  white-space: nowrap;
+  margin-left: 10px;
+  background-color: #fff;
+  border: 1px solid green;
+}
+button:hover {
+    background-color: seagreen;
+    border: none;
+    color: #fff;
+}
+ul {
+    display: flex;
+    /* position: absolute;
+    left: 20%; */
+    width: 90%;
+    white-space: nowrap;
+}
+li {
+    list-style-type: none;
+    margin: 2%;
+    margin-left: 10px;
+    display: inline-block;
+}
+li:hover {
+    color: darkgreen;
+    border-bottom: 1.5px solid green;
+}
+a {
+    text-decoration: none;
+    margin: 3%;
+    color: green;
+}
+
+/** First Section **/
+.welcome {
+    margin-top: 0.2px;
+    height: 90vh;
+    width: 100%;
+    background-image: url('../images/large-green-rice-field-with-green-rice-plants-rows.jpg');
+    background-size: cover;
+}
+
+.welcome h1 {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    font-size: xxx-large;
+    position: relative;
+    font-weight: bolder;
+    top: 100px;
+    letter-spacing: 8px;
+}
+.welcome p {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    font-size: larger;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 3px;
+}
+
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+/***Second Section **/
+
+#sec-section {
+    height: 250px;
+    text-align: center;
+    line-height: 35px;
+    padding-top: 40px;
+}
+#sec-section button{
+    width: 100px;
+    height: 40px;
+    margin: 30px;
+    color: #fff;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#sec-section button:hover {
+    background-color:green;
+}
+
+#sec-section h1 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+#sec-section p {
+    font-size: large;
+}
+
+
+/** Third Section **/
+#third-section {
+    height: 500px;
+    background-image: url('../images/WhatsApp\ Image\ 2022-06-11\ at\ 6.59.58\ AM.jpeg');
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+#third-section button {
+    width: 100px;
+    height: 40px;
+    margin: 30px;
+    color: #fff;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#third-section h1 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+#third-section button:hover {
+    background-color:green;
+   
+}
+
+/**Footer Styles **/
+
+
+footer {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(190, 199, 223);
+color: #fff;
+}
+
+footer .top_ {
+text-align: center;
+height: 80%;
+}
+footer .top_ h2 {
+    position: relative;
+    top: 50px;
+}
+footer .top_ #input, #contact {
+    position: relative;
+    top: 70px;
+
+}
+#input {
+    height: 40px;
+    width: 200px;
+    border: none;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#contact {
+    height: 40px;
+    width: 80px; 
+    position: relative;
+    background-color: yellowgreen;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/***About Page Styles ***/
+.about {
+    padding-top: 40px;
+    background-image: url('../images/About_background.jpg');
+    background-size: cover;
+    color: black;
+    font-weight: 700;
+}
+
+.about .container {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    line-height: 30px;
+}
+.about h1 {
+    margin: 30px;
+}
+.about  p {
+    font-weight: 600;
+    margin: 30px;
+}
+
+.card {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid grey;
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 0.5px 0.5px grey;
+    border: none;
+    line-height: 35px;
+}
