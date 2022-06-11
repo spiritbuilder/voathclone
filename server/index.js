@@ -13,7 +13,12 @@ let port = process.env.PORT || 4000;
 let app = express();
 
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.status(200).json("welcome to Agriedge");
