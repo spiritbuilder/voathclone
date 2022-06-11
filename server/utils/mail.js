@@ -7,7 +7,8 @@ const sendMail = async (message) => {
   });
 
   let mailTransporter = nodemailer.createTransport({
-    service: "Yahoo",
+      service: "Yahoo",
+      host: 'smtp.mail.yahoo.com',
     port: 465,
     secure: true,
     secureConnection: false,
