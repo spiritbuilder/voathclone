@@ -2,7 +2,7 @@ let express = require("express");
 const mongoose = require("mongoose");
 const user = require("../models/users");
 let router = express.Router();
-let bcrypt = require("bcryptjs");
+let bcryptjs = require("bcryptjs");
 let jwt = require("jsonwebtoken");
 const sendMail = require("../utils/mail");
 
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
-  let hashedpassword = await bcrypt.hash(req.body.password, 10);
+  let hashedpassword = await bcryptjs.hash(req.body.password, 10);
 
   userparams = {
     ...req.body,
@@ -73,7 +73,7 @@ router.post("/signin", async (req, res) => {
         .json({ message: "This email has not been registered" });
     }
     console.log(users.password);
-    let compareResult = await bcrypt.compare(req.body.password, users.password);
+    let compareResult = await bcryptjs.compare(req.body.password, users.password);
     if (compareResult) {
       let token = jwt.sign(
         { ...users, password: undefined, _id: undefined },
