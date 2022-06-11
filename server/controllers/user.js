@@ -2,7 +2,7 @@ let express = require("express");
 const mongoose = require("mongoose");
 const user = require("../models/users");
 let router = express.Router();
-let bcrypt = require("bcrypt");
+let bcrypt = require("bcryptjs");
 let jwt = require("jsonwebtoken");
 const sendMail = require("../utils/mail");
 
