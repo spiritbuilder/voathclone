@@ -1,15 +1,5 @@
 
-const welcome_body  = document.querySelectorAll('.welcome-body')
 
-// welcome_body.forEach((e)=>{
-//     if(){
-
-//     }
-// })
-
-
-
-// Login Code
 
 const login =  document.getElementById('login')
 const register = document.getElementById('register')
@@ -30,29 +20,3 @@ register.addEventListener('click' , (e)=> {
     regForm.style.display = 'block'
 })
 
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-
-// let prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//     let currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//       document.getElementById("header").style.display = "none";
-//     } else {
-//       document.getElementById("header").style.top = "block";
-//     }
-//     prevScrollpos = currentScrollPos;
-//   }
-
-// var lastScrollTop;
-// navbar = document.getElementById('header');
-// window.addEventListener('scroll',function(){
-// var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-// if(scrollTop > lastScrollTop){
-// navbar.style.top='-80px';
-// }
-// else{
-// navbar.style.top='0';
-// }
-// lastScrollTop = scrollTop;
-// });
