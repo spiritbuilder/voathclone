@@ -4,6 +4,7 @@ let cors = require("cors");
 let DB = require("./db/db.js");
 let userController = require("./controllers/user");
 let auth = require("./middlewares/auth");
+let predict = require("./controllers/predict")
 
 dotenv.config();
 DB._connect();
@@ -24,6 +25,8 @@ app.get("/", (req, res) => {
   res.status(200).json("welcome to Agriedge");
 });
 app.use("/api/v1/auth", userController);
+
+app.use("/api/v1/predict",predict)
 
 app.get("*", (req, res) => {
   res.redirect("/");
