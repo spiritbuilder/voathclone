@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroEdge | Login</title>
+    <link rel="stylesheet" href="Styles/login.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <Script src="Scripts/index.js" async></Script>
+    <Script src="Scripts/script.js" async></Script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href="index.html"><img src="images/Agroedge.png" alt="logo" width="100px" height="90px"> </a> 
+        </div>
+        <div class="nav">
+            <ul>
+                <a href="about.html"> <li>About</li></a> 
+                <a href="services.html"> <li>Services</li></a> 
+                <a href="Solutions.html"><li>Solutions</li></a> 
+            </ul>
+            <button><a href="login.html"> Log in </a> </button>
+            <button><a href="login.html"> Sign Up </a> </button>
+        </div>
+    </header>
+    
+    <div class="dummy"></div>
+    <div class="card">
+        <div class="top">
+            <a href="" id="register">Register</a>
+            <a href="" id="login">Login</a>
+        </div>
+
+
+        <div class="innercard reg-form" id="reg-form">
+            <form action="https://voathclone.vercel.app/api/v1/auth/signup" method="post" id="signUp">
+            <h3>Sign Up</h3>
+
+            <label for="email">
+                Email
+                <input type="email" name="email" id="email" required>
+            </label>
+            <label for="firstname">
+                Firstname
+                <input type="name" name="firstname" id="firstname" required>
+            </label>
+            <label for="lastname">
+                Lastname
+                <input type="name" name="lastname" id="lastname" required>
+            </label>
+            <label for="number">
+                Phone number
+                <input type="tel" name="number" id="number" required>
+            </label>
+            <label for="password">
+                Password 
+                <input type="password" name="password" id="password" required>
+            </label>
+            <label for="password">
+                Retype Password 
+                <input type="password" name="password" id="password" required>
+            </label>
+            <button type="submit">Sign Up</button>
+        </form>
+            <div class="bottom">
+            <p>Already a User?</p> <a href="#login-form">Login</a></div>
+        </div>
+
+
+        <div class="innercard login-form" id="login-form">
+
+            <form action="/api/v1/auth/signin" method="post">
+            <h3>Login</h3>
+            <label for="email">
+                Email
+                <input type="email" name="email" id="email_">
+            </label>
+
+            <label for="password">
+                Password 
+                <input type="password" name="password" id="password_">
+            </label>
+            <button>Login</button>
+        </form>
+            <a href="" class="forget-password">Forgot Password</a>
+            <div class="bottom">
+            <p>Need an account?</p> <a href="#reg-form">SignUp</a></div>
+        </div>
+        </div>
+    
+
+    <footer id="footer">
+
+        <div class="top_">
+        <h2>Stay up to date with what we are doing</h2>
+        <input type="text" name="" placeholder="Enter your email address" id="input"> <button id="contact">Contact Us</button>
+    </div>
+
+    <div class="bottom_">
+    </div>
+    </footer>
+</body>
+</html>

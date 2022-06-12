@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroEdge | Weather Forecast</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/forecast.css">
+    <Script src="Scripts/script2.js" async></Script>
+    <Script src="Scripts/script.js" async></Script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <div class="logo">
+           <a href="index.html"><img src="images/Agroedge.png" alt="logo" width="100px" height="90px"> </a> 
+        </div>
+        <div class="nav">
+            <ul>
+                <a href="about.html"> <li>About</li></a> 
+                <a href="services.html"> <li>Services</li></a> 
+                <a href="Solutions.html"><li>Solutions</li></a> 
+            </ul>
+            <button><a href="login.html"> Log in </a> </button>
+            <button><a href="login.html"> Sign Up </a> </button>
+        </div>
+    </header>
+    <div class="dummy"></div>
+
+    <!--Weather Forecast template-->
+    <div class="container-fluid">
+        <section class="main">
+
+            <section class="inputs">
+
+                <input type="text" placeholder="Enter your current location..." id="cityinput">
+             
+                <button placeholder="submit" id="add">Submit</button>
+
+             </section>
+
+                <div class="wrapper">
+                    <h2 id="cityoutput"></h2>
+                    
+                    <div class="temp card">
+                        <p id="temp"></p>
+                    </div>
+
+                    <div class="card desc">
+                     
+                        <p id="description"></p>
+                    </div>
+                   
+                    <div class="card wind">
+
+                        <p id="wind"></p>
+                    </div>
+                   
+                    <div class="card humidity">
+                        <p id="humidity"></p>
+                    </div>
+                   
+                </div>
+              </section>
+        </section>
+     </div>
+
+     <!----Recommmendation Section ----->
+     <section class="recommendation">
+        <h1>Recommendations</h1>
+
+        <div class="col-6">
+        </div>
+
+        <div class="col-6"></div>
+
+    </section>
+     <!--Footer-->
+
+
+     <footer>
+
+        <div class="top_">
+        <h2>Stay up to date with what we are doing</h2>
+        <input type="text" name="" placeholder="Enter your email address" id="input"> <button id="contact">Contact Us</button>
+    </div>
+
+    <div class="bottom_">
+    </div>
+    </footer>
+</body>
+</html>
